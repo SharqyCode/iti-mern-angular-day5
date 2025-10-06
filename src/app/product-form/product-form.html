@@ -1,0 +1,25 @@
+<form [formGroup]="prodForm" class="container p-4" (submit)="onSubmit()">
+    <h3>Enter Product Data:</h3>
+    <div>
+  <label class="col-form-label mt-2" for="product-name">product-name</label>
+  <input type="text" class="form-control" placeholder="product-name" id="product-name" formControlName="name">
+</div>
+    <div>
+  <label class="col-form-label mt-2" for="product-desc">product-desc</label>
+  <input type="text" class="form-control" placeholder="product-desc" id="product-desc" formControlName="desc">
+</div>
+    <div>
+  <label class="col-form-label mt-2" for="img-url">img-url</label>
+  <input type="text" class="form-control" placeholder="img-url" id="img-url" formControlName="imgUrl">
+</div>
+    <div>
+  <label class="col-form-label mt-2" for="product-rating">product-rating</label>
+  <input type="text" class="form-control" placeholder="product-rating" id="product-rating" formControlName="rating">
+    </div>
+<button type="submit" class="btn btn-primary mt-4">Submit</button>
+@if(!prodForm.valid && prodForm.touched && prodForm.dirty){
+  <p style="color: rgb(200, 56, 56)" class="mt-2">{{errorMsg}}</p>
+} @else {
+      <p style="color: rgb(57, 202, 65)" class="mt-2">✅ {{successMsg}}</p>
+  }
+</form>

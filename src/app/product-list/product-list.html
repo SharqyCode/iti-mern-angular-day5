@@ -1,0 +1,9 @@
+<div class="container d-flex flex-wrap justify-content-center gap-4">
+    @if (porductArr.length > 0)
+    {
+        @for (product of porductArr; track product.name) {
+            <app-product-card [prodName]="product.name" [prodDesc]="product.desc" [prodImgUrl]="product.imgUrl" [prodRating]="product.rating"></app-product-card>
+        }
+
+    }
+</div>
