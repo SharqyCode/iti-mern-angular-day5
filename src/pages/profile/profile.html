@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="text-center mt-5">Your Profile</h1>
+    <div>
+        <fieldset disabled="">
+            <label class="form-label" for="disabledInput">Username:</label>
+            <input  name="username" class="form-control" id="disabledInput" type="text" placeholder={{username}} disabled="">
+          </fieldset>
+        <fieldset disabled="" class="mt-4">
+            <label class="form-label" for="disabledInput">Password</label>
+            <input name="password" class="form-control" id="disabledInput" type="text" placeholder={{password}} disabled="">
+          </fieldset>
+    </div>
+<div class="mt-5 d-flex justify-content-center gap-4 mb-5 ">
+    <a class="btn btn-info" 
+            routerLink="edit">Edit</a>
+    <a class="btn btn-warning"
+            routerLink="settings">Settings</a>
+</div>
+<router-outlet></router-outlet>
